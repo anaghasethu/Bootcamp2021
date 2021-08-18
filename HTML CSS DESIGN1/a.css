@@ -1,0 +1,138 @@
+
+
+@media screen and (max-width: 40.5em) {
+ 
+html, body {
+    margin: 0%;
+    padding: 0;
+    min-height: 100%;
+}
+.main-header {
+    text-align: center;
+    
+    color: rgb(5, 0, 0);
+    font-weight: 300;
+    font-size: 46pt;
+    background-color: rgb(255, 255, 255);
+}
+.find{
+    font-family: sans-serif;
+    color: rgb(34, 77, 79);
+    text-align: left;
+    font-weight:lighter;
+    font-size: 44px;
+    padding-left: 15px;
+    
+}
+.box{
+    width: 450px;
+    height: 740px;  
+    margin-top: 0px;
+    margin-left: 0px;
+    padding:0%;
+    border: 1px solid rgb(220,220,220 );
+    box-sizing: border-box;
+    align-content: center;
+    -moz-box-align: center;
+  
+}
+
+
+.logo{
+    width: auto;
+    height: auto;
+    padding-left: 20px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    float:unset;
+   
+}
+.btn{
+    transform: translate(-50%, -120%);
+    
+    border-radius: 0%;
+    border: none;
+    height: 70px;
+    width: 200px;
+    text-align: center;
+    background-color: rgb(34, 77, 79);
+    color: blanchedalmond;
+    font-size: 21px;
+    margin-left: 310px; 
+    margin-bottom: 450px;
+    font-family: sans-serif;
+    font-weight: normal;
+}
+
+.shopitem {
+    
+    padding-left: 15px;
+    padding-right: 100px;
+}
+
+
+.shop-item {
+    margin: 30px;
+    padding-left: 20px;
+}
+
+.flex-container{
+    display: flex;
+    width: 550px;
+    height: 700px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex-container>div{
+    width: 150px;
+    height: 70px;
+
+}
+
+.shop-item-image{
+    transform: translate(0%, -45%);
+   
+    height: 175px;
+    width: 160px;
+    border-radius: 10px;
+    padding-right: 20px;
+    border: 20px;
+    border-radius: 10%;
+    border-top-right-radius: 20%;
+}
+
+.bt{
+    transform: translate(0%, -350%);
+    
+    border-radius: 0%;
+    border: none;
+    height: 30px;
+    width: 160px;
+    text-align: left;
+   
+    background-color: rgb(34, 77, 79);
+    color:rgb(255, 255, 255);
+    font-size: 15px;
+    opacity: 0.85;
+    font-family: sans-serif;
+    font-weight: 100px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.but{
+    transform: translate(0%, -290%);
+    font-family: sans-serif;
+    font-weight: normal;
+    text-align: center;
+    background-color: black;
+    color: cornsilk;
+    font-size: 20px;
+    height: 50px;
+    width: 450px;
+    opacity: 0.95;
+    padding: 0px;
+}
+
+}
