@@ -1,2 +1,2 @@
 Create a webpage in mobile view.
-Reference is given.
+Reference image is given.
