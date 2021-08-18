@@ -1,2 +1,2 @@
-Create a webpage in mobile view.
+Create a webpage for mobile view.
 Reference image is given.
