@@ -1,0 +1,66 @@
+create database health_record;
+
+create table user_cred ( user_id int primary key, username varchar(20), password varchar(20));
+
+create table roles(role_id int primary key, user_id int, role_name varchar(20), foreign key(user_id) references user_cred(user_id));
+
+
+create table hospital (hospital_id int primary key, hospital_name varchar(20), hospital_address varchar(100), hospital_contact varchar(20), hospital_mail varchar(20), user_id int, foreign key(user_id) references user_cred(user_id));
+
+create table doctor (doctor_id int primary key, doctor_name varchar(20), department varchar(30), hospital_id int, foreign key(hospital_id) references hospital(hospital_id));
+
+
+create table patient(patient_id varchar(20) primary key, patient_name varchar(30), patient_address varchar(100), patient_contact varchar(20), patient_emergencycontact varchar(20), hospital_id int, foreign key(hospital_id) references hospital(hospital_id),user_id int, foreign key(user_id) references user_cred(user_id));
+
+
+create table billing(bill_id serial primary key, service_cost float, patient_id varchar(20), foreign key(patient_id) references patient(patient_id), test_cost float, bill_date date, total_amount float);
+
+
+create table insurance(insurance_id int primary key, company_name varchar(20), broker_name varchar(20),amount_insured float, bill_id int, foreign key(bill_id) references billing(bill_id));
+
+create table treatment ( hospital_id int, patient_id varchar(20), doctor_id int,timestamp timestamp, summary_notes varchar(2000), bill_id int, foreign key(hospital_id) references hospital(hospital_id) , foreign key(patient_id) references patient(patient_id), foreign key(doctor_id) references doctor(doctor_id), foreign key(bill_id) references billing(bill_id));
+
+
+jmeter installation in ubuntu-- https://lukems.com/en/how-to-install-jmeter-on-ubuntu-20-04/
+
+
+select count(*) from treatment;
+select count(*) from billing;
+
+create index index_billing on billing(bill_id);
+create index index_doctor on doctor(doctor_id);
+create index index_hospital on hospital(hospital_id);
+create index index_insurance on insurance(insurance_id);
+create index index_patient on patient(patient_id);
+create index index_roles on roles(role_id);
+create index index_treatment on treatment(hospital_id,patient_id);
+create index index_user_cred on user_cred(user_id);
+
+drop index index_billing;
+drop index index_doctor;
+drop index index_hospital;
+drop index index_insurance;
+drop index index_patient;
+drop index index_roles;
+drop index index_treatment;
+drop index index_user_cred;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
