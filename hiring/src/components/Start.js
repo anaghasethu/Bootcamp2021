@@ -14,13 +14,15 @@ export default class Start extends Component {
         this.onChangeEmail = this.onChangeEmail.bind(this);
         this.onChangePhone = this.onChangePhone.bind(this);
         this.onChangeCollege = this.onChangeCollege.bind(this);
+        this.onChangePlace = this.onChangePlace.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
             name: '',
             email: '',
             phone: '',
-            college: ''
+            college: '',
+            place: ''
         }
     }
 
@@ -39,7 +41,9 @@ export default class Start extends Component {
     onChangeCollege(e) {
         this.setState({ college: e.target.value })
     }
-
+    onChangePlace(e) {
+        this.setState({ place: e.target.value })
+    }
     
     onSubmit(e) {
         e.preventDefault()
@@ -55,14 +59,16 @@ export default class Start extends Component {
                 name: this.userData.name,
                 email: this.userData.email,
                 phone: this.userData.phone,
-                college: this.userData.college
+                college: this.userData.college,
+                place: this.userData.place
             })
         } else {
             this.setState({
                 name: '',
                 email: '',
                 phone: '',
-                college: ''
+                college: '',
+                place: ''
             })
         }
     }
@@ -94,16 +100,22 @@ export default class Start extends Component {
                       
                         <input type="tel" placeholder="Phone number" className="form-control my-3" value={this.state.phone} onChange={this.onChangePhone} />
                     </div>
-                    <button  className="btn btn-dark mx-5 px-5 my-3">
-                    <Link to='/Resume' className="btn btn-dark">
-                       <label>Submit</label>
-                    </Link>
-                    </button>
+                    
                 </form>
                 
             </div>
             </div>
+            <div className="d-flex justify-content-end">
+            
+            <button  className="btn btn-dark mx-5 px-5 my-3">
+            <Link to='/Resume' className="btn btn-dark">
+               <label>Next</label>
+            </Link>
+            </button>
+          
             </div>
+            </div>
+            
         )
     }
 }

@@ -1,9 +1,9 @@
 import './Start.css';
 import { Link } from 'react-router-dom';
+import Button from "@restart/ui/esm/Button";
 import React, { Component } from 'react';
 import logo from './index.jpeg';
-
-export default class Resume extends Component {
+export default class Third extends Component {
 
     userData;
 
@@ -91,31 +91,31 @@ export default class Resume extends Component {
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
                        
-                        <input type="text" placeholder="college name" className="form-control my-3" value={this.state.college} onChange={this.onChangeCollege} />
+                        <input type="text" placeholder="place" className="form-control my-3" value={this.state.place} onChange={this.onChangePlace} />
                     </div>
-                   
                 </form>
                 
             </div>
             </div>
+            
             <div className="d-flex justify-content-between">
             
             <button  className="btn btn-dark mx-5 px-5 my-3">
-            <Link to='/' className="btn btn-dark">
-               <label>Previous</label>
+            <Link to='/Resume' className="btn btn-dark">
+               <label>Prevoius</label>
             </Link>
             </button>
             
             
             <button  className="btn btn-dark mx-5 px-5 my-3">
             <Link to='/Third' className="btn btn-dark">
-               <label>Next</label>
+               <label>Submit</label>
             </Link>
             </button>
           
             </div>
-            
             </div>
+            
         )
     }
 }
